@@ -1,0 +1,191 @@
+@import "../../variables";
+
+
+.card-block {
+  width: 90%;
+  min-height: 75px;
+  margin: 0 auto 30px;
+  border-radius: 3px;
+  border: solid 1px $white;
+  background-color: $white-four;
+
+  .card-wrapper {
+    display: flex;
+
+    .card-image {
+      height: 100%;
+      min-height: 100%;
+
+      img {
+        height: 100%;
+        min-height: 100%;
+        width: 110px;
+      }
+    }
+
+    .main-history {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      padding: 6px 20px 0;
+      box-sizing: border-box;
+
+      .history-wrapper {
+        .history-left {
+          display: flex;
+          flex-direction: column;
+          font-weight: bold;
+
+          a {
+            color: #000;
+            text-decoration: none;
+
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+
+      }
+
+      .mobile-score {
+        display: none;
+      }
+
+      .left-down {
+        display: flex;
+        align-items: center;
+        width: 220px;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .mini-image {
+          display: flex;
+          align-items: center;
+          width: 220px;
+          justify-content: space-between;
+          margin-top: 10px;
+        }
+
+        &.expanded {
+          width: 100%;
+        }
+
+        &.mini-image img {
+          width: 100%;
+
+        }
+      }
+    }
+
+    .history-right {
+      width: 154px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .percents {
+        font-size: $language-text-size;
+        width: 40px;
+        height: 30px;
+        margin: 20px;
+        padding: 7px 6px 6px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .actions-buttons {
+    width: 97%;
+    display: flex;
+    justify-content: end;
+  }
+
+
+}
+
+@media screen and (max-width: 556px) {
+  .card-wrapper {
+    .main-history {
+      .left-down {
+        .mini-image {
+          width: 84%;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .card-block .card-wrapper .history-right {
+    display: none;
+  }
+  .card-block .card-wrapper .main-history .mobile-score {
+    display: flex;
+
+    .percents {
+      border: 0 !important;
+    }
+
+    .css-3ogxn6-MuiButtonBase-root-MuiIconButton-root {
+      display: contents;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card-wrapper {
+    margin: 0 auto;
+
+    .card-image {
+      img {
+        height: 50px;
+      }
+    }
+
+    .main-history {
+
+      .history-wrapper {
+
+        .history-left {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 10px;
+        }
+      }
+
+      .left-down {
+        padding: 0;
+        margin: 0;
+
+        .mini-image {
+          width: 8px;
+          height: 5px;
+        }
+
+        &.mini-image img {
+          width: 90%;
+        }
+
+      }
+    }
+
+    .history-right {
+      width: 15px;
+      display: flex;
+      flex-direction: column;
+
+      .percents {
+        width: 40px;
+        height: 30px;
+        margin: 20px;
+      }
+    }
+
+  }
+}

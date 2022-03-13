@@ -1,0 +1,73 @@
+@import "../../variables";
+
+.header {
+  width: 100%;
+  min-height: 50px;
+  border-bottom: 1px solid #e2e2e2;
+  box-sizing: border-box;
+
+  .container-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px 20px 3px 20px;
+  }
+
+  .image {
+    width: 90px;
+    height: 43px;
+    flex: 100%;
+    margin: 3px 0 5px 20px;
+
+    svg {
+      display: none;
+    }
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .header {
+    .image {
+      margin: 11px 20px 12px 15px;
+      display: flex;
+      align-items: center;
+
+      svg {
+        display: block;
+        color: $filter-color;
+        margin: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    .avatar {
+      svg {
+        display: none;
+      }
+    }
+
+    .image {
+      img {
+        width: 60px;
+      }
+
+      svg {
+        width: 30px;
+        color: $filter-color;
+        display: block;
+        margin: 20px;
+      }
+    }
+  }
+}

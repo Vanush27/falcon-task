@@ -1,0 +1,131 @@
+@import "../../variables";
+
+.container {
+  background-color: $white-two;
+
+  &.container-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+
+  .watchlist-Name {
+
+    width: 72%;
+    padding: 20px 30px;
+
+    h2 {
+      font-size: $title-header;
+      color: $filter-color;
+      font-weight: bold;
+      font-family: $default-font;
+    }
+
+    .two-button {
+      display: flex;
+      align-items: center;
+
+
+      .btn-refresh {
+        height: 40px;
+        margin: 0 6px 0 0;
+        border-radius: 3px;
+        border: solid 1px #eee;
+        background-color: $white-four;
+        font-size: $filter-text;
+        font-weight: bold;
+        color: $language-text-color;
+        display: flex;
+        align-items: center;
+      }
+
+      .btn-filter {
+        height: 40px;
+        padding: 12px 20px 12px 17px;
+        border-radius: 3px;
+        font-size: $filter-text;
+        font-weight: bold;
+        color: $language-text-color;
+        display: flex;
+        align-items: center;
+        border: solid 1px $white-eee;
+        background-color: $white-eee;
+
+      }
+    }
+  }
+
+  .rectangle {
+    width: 340px;
+    background-color: $white;
+    min-height: 100vh;
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .container {
+    .rectangle {
+      display: none;
+    }
+
+    .watchlist-Name {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      box-sizing: border-box;
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .btn-refresh {
+        width: 40px;
+
+        .refresh {
+          display: none;
+        }
+      }
+
+      .btn-filter {
+        height: 40px;
+        width: 100px;
+      }
+    }
+
+  }
+
+
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    .watchlist-Name {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+
+      h2 {
+        font-size: 19px;
+      }
+
+      .two-button {
+
+        .btn-filter {
+          width: 40px;
+          padding: 12px 8px 12px 9px;
+
+          .filter {
+            display: none;
+          }
+        }
+      }
+
+    }
+  }
+
+}

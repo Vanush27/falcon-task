@@ -1,0 +1,37 @@
+@import "../../variables";
+
+.check-box-wrapper {
+  font-family: $default-font;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .text-title {
+    width: 80px;
+    height: 16px;
+    margin: 5px 51px 19px 0;
+    font-size: $language-text-title-size;
+    font-weight: bold;
+    letter-spacing: normal;
+    color: $language-text-color;
+  }
+
+  .languages {
+    width: 64px;
+    height: 16px;
+    margin: 20px 67px 4px 0;
+
+    font-size: $language-text-title-down-size;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: $language-text-title-down-color;
+  }
+
+  .text {
+    width: 122px;
+    height: 17px;
+    margin: 1px 0 0 10px;
+    font-size: $language-text-size;
+    color: $language-text-color;
+  }
+}

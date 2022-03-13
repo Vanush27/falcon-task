@@ -1,0 +1,130 @@
+@import "../../variables";
+
+.filter-wrapper {
+  .container-main {
+
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    .container-filter {
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 3px;
+      background-color: #eee;
+      display: flex;
+      justify-items: center;
+
+      .filter-item {
+        width: 172px;
+        height: 40px;
+        margin: 0 0 0 5px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+
+        .MuiFormControl-root {
+          width: 100%;
+          position: relative;
+          top: -7px;
+        }
+
+        .MuiFormLabel-filled {
+          .MuiInput-root {
+            top: 6px;
+          }
+
+        }
+
+        .MuiSelect-select {
+          font-size: 13px;
+        }
+
+        .MuiInputLabel-formControl {
+          top: 0;
+          text-transform: uppercase;
+        }
+
+        .MuiInput-underline:after,
+        .MuiInput-underline:before {
+          content: none !important;
+        }
+
+        .MuiInput-input {
+          &:focus {
+            background: transparent !important;
+          }
+        }
+
+        .css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input {
+          top: 5px;
+          position: relative;
+          color: #292929;
+          font-size: 13px;
+
+        }
+      }
+      .btn {
+        width: 172px;
+        height: 40px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .filter-wrapper {
+    .container-main {
+      width: 90%;
+      margin: 0 auto;
+
+      .container-filter{
+        width: 100%;
+        .filter-item {
+          width: 30%;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .filter-wrapper {
+    .container-main {
+
+      .container-filter{
+        width: 100%;
+        flex-direction: column;
+        .btn {
+          width: 80%;
+          margin: 0 auto;
+        }
+
+        .filter-item {
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+}
+
+label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-shrink.MuiFormLabel-filled {
+  top: 12px;
+}
+
+.MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-formControl.MuiInput-formControl {
+  top: 5px;
+}
+
+.MuiSelect-icon {
+  top: -1px !important;
+}
